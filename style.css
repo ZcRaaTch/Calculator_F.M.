@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
 :root {
-    --clr-body-bg-1:hsl(222, 26%, 31%);
-    --clr-body-bg-2:hsl(0, 0%, 90%);
-    --clr-body-bg-3:hsl(268, 75%, 9%);
+  --clr-body-bg-1:hsl(222, 26%, 31%);
+  --clr-main-bg-1:hsl(223, 31%, 20%);
+    
+  --clr-screen-bg-1:hsl(224, 36%, 15%);
+  
+  --clr-key-bg-primary:hsl(30, 25%, 89%);
+  --clr-key-bg-secondary:hsl(225, 21%, 49%);
+  --clr-key-bg-tertiary:hsl(6, 63%, 50%);
 
-    --clr-main-bg-1:hsl(223, 31%, 20%);
-    --clr-main-bg-2:hsl(0, 5%, 81%);
+  --clr-key-shadow-primary:hsl(28, 16%, 65%);
+  --clr-key-shadow-secondary:hsl(224, 28%, 35%);
+  --clr-key-shadow-tertiary:hsl(6, 70%, 34%);
 
-    --clr-screen-bg-1:hsl(224, 36%, 15%);
-    --clr-screen-bg-2:hsl(0, 0%, 93%);
-    --clr-screen-bg-3:hsl(268, 71%, 12%);
 
-    --clr-text-1:hsl(221, 14%, 31%);
-    --clr-text-1:hsl(60, 10%, 19%);
-    --clr-text-3:hsl(52, 100%, 62%);
+  --clr-text-primary:hsl(221, 14%, 31%);
+  --clr-text-secondary:hsl(0, 0%, 100%);
 
-    --border-radius-primary:1.25rem;
+
+  --border-radius-primary:1.25rem;
 }
 
 /* CSS reset section */
@@ -32,6 +35,7 @@
   padding: 0;
   list-style: none;
   font-family: "League Spartan", sans-serif;
+  /* overflow: hidden; */
 }
 
 body {
@@ -92,7 +96,7 @@ h6 {
     /* background-color: black; */
     padding: 2px;
     width: 100%;
-    color: white;
+    color: var(--clr-text-secondary);
     height: 100px;
     
   }
@@ -111,27 +115,27 @@ h6 {
   }
   .nums::before{
     content: "";
-    background-color: hsl(223, 31%, 20%);
-    width: 3.8rem;
+    background-color: var(--clr-main-bg-1);
+    width: 3.9rem;
     height: 20px;
     border-radius: 1rem;
     position: relative;
-    top:1.25rem;
-    left: 18.5%;
+    top:1.45rem;
+    left: 19.2%;
     
   }
   .theme{
     margin: 0 6px;
     cursor: pointer;
   }
-  .theme:hover{
+  .theme:hover, .theme:focus{
     z-index: 1;
   }
   #theme-1::after{
     content: "";
     position: absolute;
-    background-color:hsl(6, 63%, 50%) ;
-    transform: translate(-9px, 23px);
+    background-color:var(--clr-key-bg-tertiary) ;
+    transform: translate(-9px, 26px);
     height: 13px;
     width: 13px;
     border-radius: 50%;
@@ -140,8 +144,8 @@ h6 {
   #theme-2::after{
     content: "";
     position: absolute;
-    background-color:hsl(6, 63%, 50%) ;
-    transform: translate(-9px, 23px);
+    background-color:var(--clr-key-bg-tertiary) ;
+    transform: translate(-9px, 26px);
     height: 13px;
     width: 13px;
     border-radius: 50%;
@@ -150,8 +154,8 @@ h6 {
   #theme-3::after{
     content: "";
     position: absolute;
-    background-color:hsl(6, 63%, 50%) ;
-    transform: translate(-9px, 23px);
+    background-color:var(--clr-key-bg-tertiary) ;
+    transform: translate(-9px, 26px);
     height: 13px;
     width: 13px;
     border-radius: 50%;
@@ -168,6 +172,11 @@ h6 {
     border: 0;
     outline: none;
     border-radius: 10px;
+
+    color: var(--clr-text-secondary);
+    font-size: 32px;
+    text-align: right;
+    padding: 0 1rem;
   }
   .btn{
     
@@ -180,14 +189,14 @@ h6 {
     margin: 1rem ;
   }
   button{
-    color: hsl(221, 14%, 31%);
-    background-color: hsl(30, 25%, 89%);
+    color: var(--clr-text-primary);
+    background-color: var(--clr-key-bg-primary);
     font-size: 23px;
     outline: none;
     border: 0;
     cursor: pointer;
     border-radius: 5px;
-    box-shadow: 0px 5px 0px 0px hsl(28, 16%, 65%);
+    box-shadow: 0px 5px 0px 0px var(--clr-key-shadow-primary);
     width:3.6rem;
     height: 3.5rem;
     padding: 1rem;
@@ -196,19 +205,23 @@ h6 {
   .reset, .equals{
     width: 130px;
   }
-  .reset,.del{
+  .reset,.delete{
     color: white;
-    background-color:hsl(225, 21%, 49%) ;
-    box-shadow: 0px 5px 0px 0px hsl(224, 28%, 35%);
+    background-color:var(--clr-key-bg-secondary) ;
+    box-shadow: 0px 5px 0px 0px var(--clr-key-shadow-secondary);
   }
   .equals{
-    color: white;
-    background-color:hsl(6, 63%, 50%) ;
-    box-shadow: 0px 5px 0px 0px hsl(6, 70%, 34%);
+    color: var(--clr-text-secondary);
+    background-color:var(--clr-key-bg-tertiary) ;
+    box-shadow: 0px 5px 0px 0px var(--clr-key-shadow-tertiary);
   }
   @media (min-width:376px) {
     .heading{
       width: 400px;
+    }
+    .nums::before{
+      top:1.45rem;
+      left: 15.5%;
     }
     .screen{
       width: 400px;
@@ -216,4 +229,14 @@ h6 {
     .btn{
       width: 400px;
     }
+    button{
+      font-size: 28px;
+      width: 4.5rem;
+      height: 3.1rem;
+      margin: 10px 10px;
+    }
+    .reset, .equals{
+      width: 164px;
+    }
+    
   }
