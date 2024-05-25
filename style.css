@@ -18,6 +18,9 @@
   --clr-text-primary:hsl(221, 14%, 31%);
   --clr-text-secondary:hsl(0, 0%, 100%);
 
+  --clr-key-hover-primary:hsla(0, 0%, 100%, 0.897);
+  --clr-key-hover-secondary:hsl(225, 24%, 55%);
+  --clr-key-hover-tertiary:hsl(6, 63%, 55%);
 
   --border-radius-primary:1.25rem;
 }
@@ -128,9 +131,7 @@ h6 {
     margin: 0 6px;
     cursor: pointer;
   }
-  .theme:hover, .theme:focus{
-    z-index: 1;
-  }
+
   #theme-1::after{
     content: "";
     position: absolute;
@@ -202,6 +203,9 @@ h6 {
     padding: 1rem;
     margin: 8px 8px;
   }
+  button:hover{
+    background-color: var(--clr-key-hover-primary);
+  }
   .reset, .equals{
     width: 130px;
   }
@@ -210,10 +214,16 @@ h6 {
     background-color:var(--clr-key-bg-secondary) ;
     box-shadow: 0px 5px 0px 0px var(--clr-key-shadow-secondary);
   }
+  .reset:hover,.delete:hover{
+    background-color: var(--clr-key-hover-secondary);
+  }
   .equals{
     color: var(--clr-text-secondary);
     background-color:var(--clr-key-bg-tertiary) ;
     box-shadow: 0px 5px 0px 0px var(--clr-key-shadow-tertiary);
+  }
+  .equals:hover{
+    background-color: var(--clr-key-hover-tertiary);
   }
   @media (min-width:376px) {
     .heading{

@@ -1,10 +1,7 @@
 var theme1=document.querySelector("#theme-1");
 var theme2=document.querySelector("#theme-2");
 var theme3=document.querySelector("#theme-3");
-
-var stl=getComputedStyle(document.body);
-
-
+theme1.style.zIndex = "1";
 
 theme1.addEventListener("click",function(){
     document.documentElement.style.setProperty('--clr-body-bg-1','hsl(222, 26%, 31%)');
@@ -18,6 +15,13 @@ theme1.addEventListener("click",function(){
     document.documentElement.style.setProperty('--clr-key-shadow-tertiary','hsl(6, 70%, 34%)');
     document.documentElement.style.setProperty('--clr-text-primary','hsl(221, 14%, 31%)');
     document.documentElement.style.setProperty('--clr-text-secondary','hsl(0, 0%, 100%)');
+    document.documentElement.style.setProperty('--clr-key-hover-primary','hsla(0, 0%, 100%, 0.897)');
+    document.documentElement.style.setProperty('--clr-key-hover-secondary','hsl(225, 24%, 55%)');
+    document.documentElement.style.setProperty('--clr-key-hover-tertiary','hsl(6, 63%, 55%)');
+
+    theme1.style.zIndex = "1";
+    theme2.style.zIndex = "-1";
+    theme3.style.zIndex = "-1";
 });
 theme2.addEventListener("click",function(){
     document.documentElement.style.setProperty('--clr-body-bg-1','hsl(0, 0%, 90%)');
@@ -31,6 +35,13 @@ theme2.addEventListener("click",function(){
     document.documentElement.style.setProperty('--clr-key-shadow-tertiary','hsl(25, 99%, 27%)');
     document.documentElement.style.setProperty('--clr-text-primary','hsl(60, 10%, 19%)');
     document.documentElement.style.setProperty('--clr-text-secondary','hsl(60, 10%, 19%)');
+    document.documentElement.style.setProperty('--clr-key-hover-primary','hsla(0, 0%, 100%, 0.973)');
+    document.documentElement.style.setProperty('--clr-key-hover-secondary','hsl(184, 34%, 46%)');
+    document.documentElement.style.setProperty('--clr-key-hover-tertiary','hsl(25, 81%, 45%)');
+
+    theme1.style.zIndex = "-1";
+    theme2.style.zIndex = "1";
+    theme3.style.zIndex = "-1";
 });
 theme3.addEventListener("click",function(){
     document.documentElement.style.setProperty('--clr-body-bg-1','hsl(268, 75%, 9%)');
@@ -44,5 +55,11 @@ theme3.addEventListener("click",function(){
     document.documentElement.style.setProperty('--clr-key-shadow-tertiary','hsl(177, 92%, 70%)');
     document.documentElement.style.setProperty('--clr-text-primary','hsl(52, 100%, 62%)');
     document.documentElement.style.setProperty('--clr-text-secondary','hsl(52, 100%, 62%)');
-    });
+    document.documentElement.style.setProperty('--clr-key-hover-primary','hsl(268, 44%, 28%)');
+    document.documentElement.style.setProperty('--clr-key-hover-secondary','hsl(281, 77%, 34%)');
+    document.documentElement.style.setProperty('--clr-key-hover-tertiary','hsl(176, 98%, 52%)');
 
+    theme1.style.zIndex = "-1";
+    theme2.style.zIndex = "-1";
+    theme3.style.zIndex = "1";
+    });
