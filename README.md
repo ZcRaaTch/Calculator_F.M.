@@ -27,8 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://zcraatch.github.io/Calculator_F.M./)
 
 ## My process
 
@@ -42,9 +41,11 @@ Users should be able to:
 
 ### What I learned
 
+I learned about how to use regex.
+
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I would be keep working on my dom and getting better with it along learning react to solidify my frontend skills.
 
 ### Useful resources
 
